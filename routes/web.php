@@ -21,8 +21,12 @@ Route::get('/',function(){
 
 // Routes for user
 Route::prefix('user')->controller(UserController::class)->group(function(){
+    // User Pages
     Route::get('home','userHomePage')->name('user#homepage');
     Route::get('about','userAboutPage')->name('user#aboutpage');
     Route::get('projects','userProjectsPage')->name('user#projectspage');
     Route::get('contact','userContactPage')->name('user#contactpage');
+
+    // Send Message
+    Route::post('sendMessage','sendMessage')->name('user#sendmessage');
 });
