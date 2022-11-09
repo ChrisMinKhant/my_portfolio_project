@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,4 +30,11 @@ Route::prefix('user')->controller(UserController::class)->group(function(){
 
     // Send Message
     Route::post('sendMessage','sendMessage')->name('user#sendmessage');
+});
+
+// Routes for admin
+Route::prefix('admin')->controller(AdminController::class)->group(function(){
+    //Main Page and Message
+    Route::get('messagePannel','messagePannel')->name('admin#messagepannel');
+    Route::get('deleteMessage/{id}','deleteMessage')->name('admin#deletemessage');
 });

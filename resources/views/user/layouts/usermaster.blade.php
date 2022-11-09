@@ -23,7 +23,7 @@
         <div class="row shadow-sm">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid align-content-center">
-                    <span class="navbar-brand text-capitalize fs-1" href="#">kaung min khant</span>
+                    <span class="navbar-brand text-uppercase fs-1 fw-bold" href="#">kaung min khant</span>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

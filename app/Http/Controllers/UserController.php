@@ -38,6 +38,8 @@ class UserController extends Controller
         $this->dataValidation($request);
         $arrayData = $this->getArray($request);
         contacts::create($arrayData);
+
+        return back()->with(['status'=>'Your Message Has Been Sent!']);
     }
 
     //data validation for user message
