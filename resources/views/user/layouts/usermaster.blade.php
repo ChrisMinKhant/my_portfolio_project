@@ -15,6 +15,9 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    {{--Animation Css Link --}}
+    <link rel="stylesheet" href="{{ asset('storage/css/animation.css') }}">
+
 </head>
 
 <body>
@@ -23,7 +26,7 @@
         <div class="row shadow-sm">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid align-content-center">
-                    <span class="navbar-brand text-uppercase fs-1 fw-bold" href="#">kaung min khant</span>
+                    <a class="navbar-brand text-uppercase fs-1 fw-bold" href="{{ route('admin#loginpage') }}">kaung min khant</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -31,17 +34,17 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="{{ route('user#homepage') }}">Home</a>
+                                <a class="nav-link fw-bold" aria-current="page"
+                                    href="{{ route('user#mainpage') }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user#aboutpage') }}">About Me</a>
+                                <a class="nav-link fw-bold" href="#AboutSection">About Me</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user#projectspage') }}">Projects</a>
+                                <a class="nav-link fw-bold" href="#ProjectsSection">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user#contactpage') }}">Contact</a>
+                                <a class="nav-link fw-bold" href="#ContactSection">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -51,10 +54,14 @@
         {{-- Nav Bar Close --}}
 
         {{-- Main Content Open --}}
-
         @yield('main_content')
-
         {{-- Main Content Close --}}
+
+        {{-- Footer Open --}}
+        <div class="row bg-dark p-3 text-center">
+            <p class="fs-6 fw-bold text-light">Copyright : copyright © 2022 by Kaung Min Khant</p>
+        </div>
+        {{-- Footer Close --}}
     </div>
 </body>
 @yield('script_session')

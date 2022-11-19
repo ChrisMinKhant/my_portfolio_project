@@ -15,6 +15,9 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    {{-- css link --}}
+    <link rel="stylesheet" href="{{ asset('storage/css/adminstyle.css') }}">
+
 </head>
 
 <body>
@@ -36,16 +39,16 @@
                             @yield('inboxCount')
                         </span>
                     </a>
-                    <a class="nav-link text-decoration-none btn btn-light text-dark rounded-3" href="#"><i
+                    <a class="nav-link text-decoration-none btn btn-light text-dark rounded-3" href="{{ route('admin#projectsuploadpage') }}"><i
                             class="fa-solid fa-arrow-up-from-bracket me-2"></i>Project Upload</a>
                 </nav>
             </div>
             {{-- Nav Bar Close --}}
+
             {{-- Content Open --}}
             @yield('main_content')
             {{-- Content Close --}}
         </div>
-        {{-- Nav Bar Close --}}
     </div>
 </body>
 @yield('script_session')
