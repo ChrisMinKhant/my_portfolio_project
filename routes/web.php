@@ -17,16 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 // Initial Route
 Route::get('/',function(){
-    return view('user.home');
+    return redirect()->route('user#mainpage');
 });
 
 // Routes for user
 Route::prefix('user')->controller(UserController::class)->group(function(){
     // User Pages
-    Route::get('home','userHomePage')->name('user#homepage');
-    Route::get('about','userAboutPage')->name('user#aboutpage');
-    Route::get('projects','userProjectsPage')->name('user#projectspage');
-    Route::get('contact','userContactPage')->name('user#contactpage');
+    Route::get('main','userMainPage')->name('user#mainpage');
 
     // Send Message
     Route::post('sendMessage','sendMessage')->name('user#sendmessage');
@@ -34,7 +31,17 @@ Route::prefix('user')->controller(UserController::class)->group(function(){
 
 // Routes for admin
 Route::prefix('admin')->controller(AdminController::class)->group(function(){
+    //admin login page
+    Route::get('registerPage','registerPage')->name('admin#registerpage');
+    Route::get('loginPage','loginPage')->name('admin#loginpage');
+
     //Main Page and Message
     Route::get('messagePannel','messagePannel')->name('admin#messagepannel');
     Route::get('deleteMessage/{id}','deleteMessage')->name('admin#deletemessage');
+
+    //Projects Upload
+    Route::get('projectsUploadPage','projectsUploadPage')->name('admin#projectsuploadpage');
+    Route::post('projectUpload','projectUpload')->name('admin#projectupload');
+    Route::get('messageDetails/{id}','messsageDetails')->name('admin#messagedetails');
+
 });

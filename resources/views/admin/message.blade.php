@@ -32,7 +32,7 @@
                         <td>{{ $contacts->name }}</td>
                         <td>{{ $contacts->email }}</td>
                         <td>{{ $contacts->phone }}</td>
-                        <td>{{ Str::limit($contacts->message, 20, '...') }}</td>
+                        <td><a href="{{ route('admin#messagedetails',$contacts->id) }}" class="text-decoration-none text-white fw-bold">{{ Str::limit($contacts->message, 20, '...') }}</a></td>
                         <td><a href="{{ route('admin#deletemessage', $contacts->id) }}"
                                 class="text-decoration-none text-danger"><i class="fa-solid fa-trash-can"></i></a></td>
                     </tr>

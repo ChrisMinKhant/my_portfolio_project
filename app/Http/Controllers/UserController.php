@@ -3,33 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\contacts;
+use App\Models\projects;
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
 
 class UserController extends Controller
 {
     //direct user home page
-    public function userHomePage()
+    public function userMainPage()
     {
-        return view('user.home');
-    }
-
-    //direct user about page
-    public function userAboutPage()
-    {
-        return view('user.about');
-    }
-
-    //direct user projects page
-    public function userProjectsPage()
-    {
-        return view('user.projects');
-    }
-
-    //direct user contact page
-    public function userContactPage()
-    {
-        return view('user.contact');
+        $projectData = projects::get();
+        return view('user.main',compact('projectData'));
     }
 
     //send message from user
