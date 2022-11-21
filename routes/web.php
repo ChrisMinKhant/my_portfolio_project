@@ -20,6 +20,22 @@ Route::get('/',function(){
     return redirect()->route('user#mainpage');
 });
 
+//Dashboard Route For JetStream
+Route::get('/dashboard',function(){
+    return redirect()->route('admin#messagepannel');
+});
+
+//Login & Register Route
+Route::controller(AdminController::class)->group(function(){
+    //admin register
+    Route::get('registerPage','registerPage')->name('admin#registerpage');
+    Route::post('registerAdmin','registerAdmin')->name('admin#registerAdmin');
+
+    //admin login
+    Route::get('loginPage','loginPage')->name('admin#loginpage');
+    Route::post('loginAdmin','loginAdmin')->name('admin#loginadmin');
+});
+
 // Routes for user
 Route::prefix('user')->controller(UserController::class)->group(function(){
     // User Pages
@@ -30,11 +46,7 @@ Route::prefix('user')->controller(UserController::class)->group(function(){
 });
 
 // Routes for admin
-Route::prefix('admin')->controller(AdminController::class)->group(function(){
-    //admin login page
-    Route::get('registerPage','registerPage')->name('admin#registerpage');
-    Route::get('loginPage','loginPage')->name('admin#loginpage');
-
+Route::prefix('admin')->controller(AdminController::class)->middleware('AdminAuth')->group(function(){
     //Main Page and Message
     Route::get('messagePannel','messagePannel')->name('admin#messagepannel');
     Route::get('deleteMessage/{id}','deleteMessage')->name('admin#deletemessage');

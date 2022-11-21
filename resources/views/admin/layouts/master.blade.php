@@ -32,16 +32,26 @@
         <div class="row bg-dark" style="height: 100vh;">
             {{-- Nav Bar Open --}}
             <div class="col-2 mt-3">
-                <nav class="nav flex-column px-4">
-                    <a class="btn btn-light text-dark rounded-3 position-relative my-5" href="{{ route('admin#messagepannel') }}">
-                        <i class="fa-solid fa-inbox me-2"></i>Inbox
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            @yield('inboxCount')
-                        </span>
-                    </a>
-                    <a class="nav-link text-decoration-none btn btn-light text-dark rounded-3" href="{{ route('admin#projectsuploadpage') }}"><i
-                            class="fa-solid fa-arrow-up-from-bracket me-2"></i>Project Upload</a>
-                </nav>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <nav class="nav flex-column px-4">
+                        <a class="btn btn-light text-dark rounded-3 position-relative my-5"
+                            href="{{ route('admin#messagepannel') }}">
+                            <i class="fa-solid fa-inbox me-2"></i>Inbox
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                @yield('inboxCount')
+                            </span>
+                        </a>
+
+                        <a class="nav-link text-decoration-none btn btn-light text-dark rounded-3"
+                            href="{{ route('admin#projectsuploadpage') }}"><i
+                                class="fa-solid fa-arrow-up-from-bracket me-2"></i>Project Upload</a>
+
+                        <button type="submit" class="nav-link text-decoration-none btn btn-light text-dark rounded-3 my-5">
+                            <i class="fa-solid fa-power-off me-2"></i>Logout</button>
+                    </nav>
+                </form>
             </div>
             {{-- Nav Bar Close --}}
 

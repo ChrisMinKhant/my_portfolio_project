@@ -15,12 +15,12 @@
 
     {{-- About Start --}}
     <div class="row align-items-center" style="height: 100vh;" id="AboutSection">
-        <div class="col-5 text-center">
+        <div class="col-4 text-center">
             <img src="{{ asset('storage/image/my_photo_1.jpg') }}" class="rounded-circle w-50">
         </div>
-        <div class="col-5 texgt-center">
-            <h1 class="text-uppercase fw-bold mb-2"><span class="fs-5">Hi, I'm</span> kaung min khant,</h1>
-            <h1 class="text-uppercase fw-bold"><span class="fs-5">a burmese inovative</span> web developer</h1>
+        <div class="col texgt-center">
+            <p class="text-uppercase fw-bold mb-2 fs-3 fs-sm-4"><span class="fs-6 fw-light">Hi, I'm</span> kaung min khant,</p>
+            <p class="text-uppercase fw-bold fs-3 fs-sm-4"><span class="fs-6 fw-light">a burmese inovative</span> web developer</p>
 
             {{-- Skills Start --}}
             <div class="row mt-5">
@@ -91,10 +91,10 @@
                 <div class="carousel-inner">
                     @foreach ($projectData as $index => $projects)
                         <div class="carousel-item @if ($index == 0) active @endif">
-                            <img src="{{ asset('storage/'. $projects->image) }}" class="d-block w-100 rounded-2"
+                            <img src="{{ asset('storage/'. $projects->image) }}" class="d-block w-100 rounded-5"
                                 style="height: 550px;">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>{{ $projects->name }}</h5>
+                                <h5 class="btn btn-light shadow-lg text-dark fw-bold fs-4">{{ $projects->name }}</h5>
                             </div>
                         </div>
                     @endforeach
@@ -118,7 +118,7 @@
                 </div>
                 <div class="col-4">
                     <p>Project In Progress</p>
-                    <p class="fs-1 fw-bold">19<i class="fa-solid fa-spinner ms-2"></i></p>
+                    <p class="fs-1 fw-bold">1<i class="fa-solid fa-spinner ms-2"></i></p>
                 </div>
                 <div class="col-4">
                     <p>Happy Customer</p>
