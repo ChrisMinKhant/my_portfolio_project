@@ -14,84 +14,92 @@
     {{-- Home End --}}
 
     {{-- About Start --}}
-    <div class="row align-items-center" style="height: 100vh;" id="AboutSection">
-        <div class="col-4 text-center">
-            <img src="{{ asset('storage/image/my_photo_1.jpg') }}" class="rounded-circle w-50">
-        </div>
-        <div class="col texgt-center">
-            <p class="text-uppercase fw-bold mb-2 fs-3 fs-sm-4"><span class="fs-6 fw-light">Hi, I'm</span> kaung min khant,</p>
-            <p class="text-uppercase fw-bold fs-3 fs-sm-4"><span class="fs-6 fw-light">a burmese inovative</span> web developer</p>
-
-            {{-- Skills Start --}}
-            <div class="row mt-5">
-                <p class="fw-bold fs-4">My Skills</p>
-                <div class="col-4">
-                    <div class="mt-2">
-                        <p class="text-muted fs-6 fw-bold">HTML</p>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar"
-                                aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-                                aria-valuemax="100" style="width: 80%; height: 8px;"></div>
-                        </div>
-                    </div>
-                    <div class="mt-2">
-                        <p class="text-muted fs-6 fw-bold">CSS</p>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar"
-                                aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-                                aria-valuemax="100" style="width: 80%; height: 8px;"></div>
-                        </div>
-                    </div>
-                    <div class="mt-2">
-                        <p class="text-muted fs-6 fw-bold">Java Script</p>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar"
-                                aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-                                aria-valuemax="100" style="width: 70%; height: 8px;"></div>
-                        </div>
-                    </div>
+    <div class="row justify-content-center align-items-center about" style="height: 100vh;" id="AboutSection">
+        <div class="card my-5 border-0 shadow-sm rounded-5" style="max-width: 75%;">
+            <div class="row g-0 m-5 align-items-center">
+                <div class="col-md-6 text-center">
+                    <img src="{{ asset('storage/image/my_photo_1.jpg') }}" class="w-50 rounded-circle" alt="My Photo">
                 </div>
-                <div class="col-4">
-                    <div class="mt-2">
-                        <p class="text-muted fs-6 fw-bold">Jquery</p>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar"
-                                aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-                                aria-valuemax="100" style="width: 70%; height: 8px;"></div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h3 class="card-title text-uppercase about_me"> <small class="fs-6">Hi,I'm</small> Kaung Min Khant</h3>
+                        <h4 class="card-text text-uppercase about_me"> <small class="fs-6">A Burmese Innovative</small> Web
+                            Developer</h4>
+                        <p class="card-text">
+                            {{-- Skills Start --}}
+                        <div class="row mt-5 skills">
+                            <p class="fw-bold fs-4">My Skills</p>
+                            <div class="col-4 skills_words">
+                                <div class="mt-2">
+                                    <p class="text-muted fw-bold">HTML</p>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                            role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 80%; height: 8px;"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-muted fw-bold">CSS</p>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                            role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 80%; height: 8px;"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-muted fw-bold">Java Script</p>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                            role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 70%; height: 8px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 skills_words">
+                                <div class="mt-2">
+                                    <p class="text-muted fw-bold">Jquery</p>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                            role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 70%; height: 8px;"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-muted fw-bold">PHP</p>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                            role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 75%; height: 8px;"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-muted fw-bold">Lavravel</p>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                            role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 85%; height: 8px;"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mt-2">
-                        <p class="text-muted fs-6 fw-bold">PHP</p>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar"
-                                aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-                                aria-valuemax="100" style="width: 75%; height: 8px;"></div>
-                        </div>
-                    </div>
-                    <div class="mt-2">
-                        <p class="text-muted fs-6 fw-bold">Lavravel</p>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar"
-                                aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-                                aria-valuemax="100" style="width: 85%; height: 8px;"></div>
-                        </div>
+                        {{-- Skills End --}}
+                        </p>
                     </div>
                 </div>
             </div>
-            {{-- Skills End --}}
         </div>
     </div>
     {{-- About End --}}
 
     {{-- Projects Start --}}
     <div class="row align-items-center bg-dark" style="height: 100vh;" id="ProjectsSection">
-        <div class="col-10 offset-1">
+        <div class="col-10 offset-1 projects">
             {{-- Carousel Start --}}
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                 <div class="carousel-inner">
                     @foreach ($projectData as $index => $projects)
                         <div class="carousel-item @if ($index == 0) active @endif">
-                            <img src="{{ asset('storage/'. $projects->image) }}" class="d-block w-100 rounded-5"
+                            <img src="{{ asset('storage/' . $projects->image) }}" class="d-block w-100 rounded-5 projects_image"
                                 style="height: 550px;">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5 class="btn btn-light shadow-lg text-dark fw-bold fs-4">{{ $projects->name }}</h5>

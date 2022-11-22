@@ -18,6 +18,9 @@
     {{--Animation Css Link --}}
     <link rel="stylesheet" href="{{ asset('storage/css/animation.css') }}">
 
+    {{-- Responsive CSS Link --}}
+    <link rel="stylesheet" href="{{ asset('storage/css/userresponsivestyle.css') }}">
+
 </head>
 
 <body>
@@ -26,7 +29,7 @@
         <div class="row shadow-sm">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid align-content-center">
-                    <a class="navbar-brand text-uppercase fs-1 fw-bold" href="{{ route('admin#loginpage') }}">kaung min khant</a>
+                    <a class="navbar-brand text-uppercase fw-bold" href="{{ route('admin#loginpage') }}" id="my_name">kaung min khant</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -58,7 +61,7 @@
         {{-- Main Content Close --}}
 
         {{-- Footer Open --}}
-        <div class="row bg-dark p-3 text-center">
+        <div class="row bg-dark p-3 text-center footer">
             <p class="fs-6 fw-bold text-light">Copyright : copyright © 2022 by Kaung Min Khant</p>
         </div>
         {{-- Footer Close --}}
